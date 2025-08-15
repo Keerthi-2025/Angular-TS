@@ -58,5 +58,6 @@ function test3(i:string,...n:number[]):void{
     for(var x:number=0;x<n.length;x++){
         console.log(n[x])
     }
+    console.log(i);
 }
 test3(10,20,30);
