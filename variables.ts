@@ -23,3 +23,5 @@ console.log(obj.age);
 
 var arr:number[] = [10, 20, 30, 40, 50];
 console.log[arr[4]];
+
+
