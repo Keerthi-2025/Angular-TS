@@ -87,3 +87,11 @@ var e = {
 };
 console.log(e.id);
 console.log(e.city);
+//constroctor based injection
+var E1 = /** @class */ (function () {
+    function E1(id) {
+        this.id = id;
+    }
+    return E1;
+}());
+//
