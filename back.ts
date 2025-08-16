@@ -40,9 +40,9 @@ console.log(Values[0]);
 
 
 //let and const has block restrication, they wont worl outside the for loops etc.
-//var will work outside and inside the block, it s nit block restricted
+//var will work outside and inside the block, it s not block restricted
 
-class A{                      //ctrl+. for errors
+class A{                      //ctrl + . for errors
     id:number;
     city:string;
 
@@ -81,10 +81,33 @@ var c1 = new C("jon",1);
 
 //accessing outside the class
 class D{
+
     x:string = "mike";
     y:number = 2;
 }
 var d = new D();
-console.log(d.x); //this is used to acess the object insde the class. Object reference is used to access outside the class
+console.log(d.x); //this is used to access non-stactic inside the class. Object reference is used to access non-stactic outside the class
 console.log(d.y);
 
+
+class E{
+    id:number;
+    city:string;
+}
+var e ={
+    "id":1,
+    "city":"chennai"
+}
+console.log(e.id);
+console.log(e.city);
+
+
+//constroctor based injection
+class E1{
+    id:number;
+    constructor(id:number){
+        this.id = id;
+    }
+}
+
+//

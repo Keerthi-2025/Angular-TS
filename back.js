@@ -32,7 +32,7 @@ var Values;
 console.log(Values);
 console.log(Values[0]);
 //let and const has block restrication, they wont worl outside the for loops etc.
-//var will work outside and inside the block, it s nit block restricted
+//var will work outside and inside the block, it s not block restricted
 var A = /** @class */ (function () {
     function A() {
     }
@@ -74,5 +74,16 @@ var D = /** @class */ (function () {
     return D;
 }());
 var d = new D();
-console.log(d.x);
+console.log(d.x); //this is used to access non-stactic inside the class. Object reference is used to access non-stactic outside the class
 console.log(d.y);
+var E = /** @class */ (function () {
+    function E() {
+    }
+    return E;
+}());
+var e = {
+    "id": 1,
+    "city": "chennai"
+};
+console.log(e.id);
+console.log(e.city);
