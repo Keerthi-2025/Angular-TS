@@ -31,3 +31,18 @@ var Values;
 })(Values || (Values = {}));
 console.log(Values);
 console.log(Values[0]);
+//let and const has block restrication, they wont worl outside the for loops etc.
+//var will work outside and inside the block, it s nit block restricted
+var A = /** @class */ (function () {
+    function A() {
+    }
+    A.prototype.test = function () {
+        this.id = 10; //to access non stactic variable using this keyword
+        this.city = "mike";
+        console.log(this.id);
+        console.log(this.city);
+    };
+    return A;
+}());
+var a1 = new A();
+a1.test();
