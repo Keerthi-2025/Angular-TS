@@ -57,3 +57,34 @@ class A{                      //ctrl+. for errors
 
 var a1 = new A();
 a1.test();
+
+//ts can have only one constructor, to create construcotr we use constructor keyword
+class B{
+    constructor(){
+        console.log(100);
+    }
+}
+var a2 = new B();
+
+
+//const with argumnets
+class C{
+    constructor(city:string,id:number){
+        //this.x= city;
+        //this.y= id;
+        //console.log(this.x);
+        console.log(`${city} ${id}`);
+    }
+
+}
+var c1 = new C("jon",1);
+
+//accessing outside the class
+class D{
+    x:string = "mike";
+    y:number = 2;
+}
+var d = new D();
+console.log(d.x); //this is used to acess the object insde the class. Object reference is used to access outside the class
+console.log(d.y);
+

@@ -46,3 +46,33 @@ var A = /** @class */ (function () {
 }());
 var a1 = new A();
 a1.test();
+//ts can have only one constructor, to create construcotr we use constructor keyword
+var B = /** @class */ (function () {
+    function B() {
+        console.log(100);
+    }
+    return B;
+}());
+var a2 = new B();
+//const with argumnets
+var C = /** @class */ (function () {
+    function C(city, id) {
+        //this.x= city;
+        //this.y= id;
+        //console.log(this.x);
+        console.log("".concat(city, " ").concat(id));
+    }
+    return C;
+}());
+var c1 = new C("jon", 1);
+//accessing outside the class
+var D = /** @class */ (function () {
+    function D() {
+        this.x = "mike";
+        this.y = 2;
+    }
+    return D;
+}());
+var d = new D();
+console.log(d.x);
+console.log(d.y);
