@@ -24,9 +24,9 @@ console.log(J.x);
 
 
 //static method
-class A1{
+class K1{
      static test1():void{
         console.log("From test");
      }
 }
-A1.test1();
+K1.test1();

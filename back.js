@@ -1,3 +1,18 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 function back(name, city) {
     console.log("".concat(name, ".").concat(city));
 }
@@ -94,4 +109,21 @@ var E1 = /** @class */ (function () {
     }
     return E1;
 }());
-//
+//inhertitance
+var I = /** @class */ (function () {
+    function I() {
+    }
+    I.prototype.testi = function () {
+        console.log("Inheritance");
+    };
+    return I;
+}());
+var I1 = /** @class */ (function (_super) {
+    __extends(I1, _super);
+    function I1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return I1;
+}(I));
+var i1 = new I1();
+i1.testi();

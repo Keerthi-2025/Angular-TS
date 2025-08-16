@@ -110,4 +110,14 @@ class E1{
     }
 }
 
-//
+//inhertitance       (multiple inheritance is not allowed in TS)
+class I{
+    testi():void{
+        console.log("Inheritance");
+    }
+}
+class I1 extends I{
+
+}
+var i1 = new I1();
+i1.testi();
