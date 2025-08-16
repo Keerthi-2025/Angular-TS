@@ -121,3 +121,33 @@ class I1 extends I{
 }
 var i1 = new I1();
 i1.testi();
+
+
+
+
+//overriding
+class I{
+    testi():void{
+        console.log("Inheritance");
+    }
+}
+class I1 extends I{
+    testi():void{
+        console.log("Inheritance");
+
+}
+var i1 = new I1();
+i1.testi();
+
+
+//arrow function
+class O{
+    testo():void{
+        var o = ()=>{
+            console.log(100);
+        };
+        O;
+    }
+}
+var o1 = new O();
+o1.testo();

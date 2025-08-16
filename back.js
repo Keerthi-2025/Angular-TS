@@ -109,7 +109,7 @@ var E1 = /** @class */ (function () {
     }
     return E1;
 }());
-//inhertitance
+//inhertitance       (multiple inheritance is not allowed in TS)
 var I = /** @class */ (function () {
     function I() {
     }
@@ -127,3 +127,38 @@ var I1 = /** @class */ (function (_super) {
 }(I));
 var i1 = new I1();
 i1.testi();
+//overriding
+var I = /** @class */ (function () {
+    function I() {
+    }
+    I.prototype.testi = function () {
+        console.log("Inheritance");
+    };
+    return I;
+}());
+var I1 = /** @class */ (function (_super) {
+    __extends(I1, _super);
+    function I1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    I1.prototype.testi = function () {
+        console.log("Inheritance");
+    };
+    return I1;
+}(I));
+var i1 = new I1();
+i1.testi();
+//arrow function
+var O = /** @class */ (function () {
+    function O() {
+    }
+    O.prototype.testo = function () {
+        var o = function () {
+            console.log(100);
+        };
+        O;
+    };
+    return O;
+}());
+var o1 = new O();
+o1.testo();
